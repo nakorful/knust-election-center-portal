@@ -1,0 +1,26 @@
+.avatar {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url("../../../../assets/images/graduate.jpeg") center/contain;
+    border-radius: 50%;
+    top: 150px;
+    /*left: 50%;*/
+    /*margin-left: -50px;*/
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.avatar_img {
+    object-fit: fill;
+    border-radius: 50%;
+}
+
+/*@media screen and (min-width: 769px){*/
+/*    .avatar {*/
+/*        left: 45%;*/
+/*    }*/
+/*}*/

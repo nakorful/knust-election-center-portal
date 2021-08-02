@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Election Center",
+  "name": "KNUST Election Center",
   "icons": [
     {
       "src": "favicon.ico",
