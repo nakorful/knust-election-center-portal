@@ -4,6 +4,7 @@ import {candidates as electoralCandidates, position} from "../../@shared/candida
 import Category from "../../@shared/category";
 import {useSelector} from "react-redux";
 import axios from 'axios';
+import {useHistory} from "react-router-dom";
 
 function ElectionPage() {
     const [candidates, setCandidates] = useState(electoralCandidates);
@@ -20,6 +21,8 @@ function ElectionPage() {
     const [selectedWoCom, setSelectedWoCom] = useState('');
 
     const [allCandidates, setAllCandidates] = useState([]);
+
+    const history = useHistory();
 
     useEffect(() => {
         if (candidates) {
@@ -78,7 +81,12 @@ function ElectionPage() {
 
         axios.post(resourceUrl, {
                 voteResults: voteResults
-        }).then(res => console.log(res));
+        }).then(res => {
+            if (res.status === 200) {
+                console.log(res);
+                history.push('/thank-you');
+            }
+        });
     }
 
     return (
